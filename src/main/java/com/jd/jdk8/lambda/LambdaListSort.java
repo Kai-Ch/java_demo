@@ -2,7 +2,11 @@ package com.jd.jdk8.lambda;
 
 import com.jd.utils.GsonUtil;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -11,10 +15,12 @@ import java.util.List;
  **/
 public class LambdaListSort {
 
+    private Logger LOG = LoggerFactory.getLogger(LambdaListSort.class);
+
     public static void main(String[] args) {
         LambdaListSort lambdaListSort = new LambdaListSort();
-        lambdaListSort.sortList1();
-
+//        lambdaListSort.sortList1();
+        lambdaListSort.sortList2();
     }
 
     public void sortList1() {
@@ -46,11 +52,32 @@ public class LambdaListSort {
                     }
                 }
         );
-
         System.out.println(GsonUtil.GsonString(list1));
     }
 
-    public void sortList2(){
-        
+    public void sortList2() {
+        List<Person> personList = new ArrayList<Person>();
+        Person p1 = new Person("bob", 12);
+        Person p2 = new Person("tom", 14);
+        Person p3 = new Person("mark", 12);
+        Person p4 = new Person("jean", 10);
+
+        personList.add(p1);
+        personList.add(p2);
+        personList.add(p3);
+        personList.add(p4);
+
+        Collections.sort(personList, (o1, o2) -> {
+            if (o1.getAge() == o2.getAge()) {
+                return 0;
+            }
+            if (o1.getAge() > o2.getAge()) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        LOG.info("1111");
+
     }
 }
