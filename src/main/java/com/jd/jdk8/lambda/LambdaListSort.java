@@ -1,7 +1,7 @@
 package com.jd.jdk8.lambda;
 
-import org.junit.Test;
 
+import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class LambdaListSort {
         });
     }
 
-    @Test(timeout = 100000000)
+    @Test
     public void carTest() {
         Car car1 = Car.create(Car::new);
         Car car2 = Car.create(Car::new);
