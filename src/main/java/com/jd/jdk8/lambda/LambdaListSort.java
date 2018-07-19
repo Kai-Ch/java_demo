@@ -2,12 +2,16 @@ package com.jd.jdk8.lambda;
 
 import com.jd.utils.GsonUtil;
 
+import org.apache.commons.collections.list.TreeList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * @Author:kaichenr
@@ -20,7 +24,8 @@ public class LambdaListSort {
     public static void main(String[] args) {
         LambdaListSort lambdaListSort = new LambdaListSort();
 //        lambdaListSort.sortList1();
-        lambdaListSort.sortList2();
+//        lambdaListSort.sortList2();
+        lambdaListSort.sortKids();
     }
 
     public void sortList1() {
@@ -56,7 +61,7 @@ public class LambdaListSort {
     }
 
     public void sortList2() {
-        List<Person> personList = new ArrayList<Person>();
+        List<Person> personList = new TreeList();
         Person p1 = new Person("bob", 12);
         Person p2 = new Person("tom", 14);
         Person p3 = new Person("mark", 12);
@@ -77,7 +82,22 @@ public class LambdaListSort {
                 return -1;
             }
         });
-        LOG.info("1111");
-
+        LOG.info("sorted list : {}", GsonUtil.GsonString(personList));
     }
+
+    public void sortKids(){
+        Set kidList = new TreeSet();
+        Kid kid1 = new Kid("k1", 15);
+        Kid kid2 = new Kid("k2", 16);
+        Kid kid3 = new Kid("k3", 12);
+        Kid kid4 = new Kid("k4", 15);
+        kidList.add(kid1);
+        kidList.add(kid2);
+        kidList.add(kid3);
+        kidList.add(kid4);
+        LOG.info("kidList : {}", GsonUtil.GsonString(kidList));
+         
+    }
+
 }
+
