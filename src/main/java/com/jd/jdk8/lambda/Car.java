@@ -3,20 +3,20 @@ package com.jd.jdk8.lambda;
 import java.util.function.Supplier;
 
 public class Car {
-    public static Car create( final Supplier< Car > supplier ) {
+    public static Car create(final Supplier<Car> supplier) {
         return supplier.get();
     }
 
-    public static void collide( final Car car ) {
-        System.out.println( "Collided " + car.toString() );
+    public static void collide(final Car car) {
+        System.out.println("Collided " + car.toString());
     }
 
-    public void follow( final Car another ) {
-        System.out.println( "Following the " + another.toString() );
+    public void follow(final Car another) {
+        System.out.println("Following the " + another.toString());
     }
 
     public void repair() {
-        System.out.println( "Repaired " + this.toString() );
+        System.out.println("Repaired " + this.toString());
     }
 
 }

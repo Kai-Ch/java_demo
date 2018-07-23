@@ -2,8 +2,10 @@ package com.jd.jdk8.lambda;
 
 
 import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class LambdaCar {
 
@@ -29,5 +31,9 @@ public class LambdaCar {
         final Car car3 = Car.create(Car::new);
         System.out.println("car3:" + car3);
         cars.forEach(car3::follow);
+
+
+        Supplier<Car> car = () -> new Car();
+
     }
 }

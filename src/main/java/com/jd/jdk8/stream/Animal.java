@@ -1,4 +1,4 @@
-package com.jd.jdk8.usteam;
+package com.jd.jdk8.stream;
 
 import java.awt.*;
 
@@ -22,7 +22,7 @@ public class Animal {
         this.name = name;
     }
 
-    public Color getCoatColor() {
+    public Color  getCoatColor() {
         return coatColor;
     }
 
