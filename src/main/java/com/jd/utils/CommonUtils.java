@@ -36,11 +36,23 @@ public class CommonUtils {
         return url + QUESTION_MARK + params;
     }
 
+    /**
+     * 变成大写
+     */
+    public static String[] humpName(String... strings) {
+        String[] strArray = strings;
+//        String[] array = Arrays.stream(strArray).map(String::toUpperCase).toArray(String[]::new);
+        String[] array = Arrays.stream(strArray).map(String::toUpperCase).toArray(str -> new String[strArray.length]);
+        return array;
+
+    }
+
 
     public static void main(String[] args) {
         CommonUtils.out("111", "222");
 //        String url = CommonUtils.jointGetParams("https://www.baidu.com", "name=11", "id=22222");
 //        System.out.println(url);
-
+        String[] array = humpName("abc", "bcd");
+        System.out.println(GsonUtil.GsonString(array));
     }
 }

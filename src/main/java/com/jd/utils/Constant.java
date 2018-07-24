@@ -13,4 +13,11 @@ public class Constant {
     public static final String MYSQL_USERNAME = "root";
 
     public static final String MYSQL_PASSWORD = "root";
+
+    public static final Integer INTEGER_ONE = 1;
+
+    public static int getIntegerOne(Object o){
+        return INTEGER_ONE;
+    }
+
 }
