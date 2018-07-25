@@ -1,4 +1,4 @@
-package com.jd.superior.main;
+package com.jd.superior.mail;
 
 import com.sun.mail.util.MailSSLSocketFactory;
 
