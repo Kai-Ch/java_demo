@@ -1,14 +1,12 @@
 package com.jd.data.structure;
 
-import com.jd.utils.GsonUtil;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @Author:kaichenr
  * @Date:2018/7/30 11:46
- * @Description:通过Object[] 创建树
+ * @Description:通过Object[] 创建树(中间不存在空值)
  **/
 public class SimpleTree {
 
