@@ -81,4 +81,12 @@ public class TestCase {
 //        order.setTime(timestamp);
         System.out.println(order.getTime());
     }
+
+    @Test
+    public void testIndex(){
+        String sysId = "01";
+        String cataCode = "0102";
+        System.out.println(cataCode.indexOf(sysId));
+
+    }
 }
