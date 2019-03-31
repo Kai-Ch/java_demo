@@ -22,9 +22,11 @@ public class Map01 {
 //            System.out.println(entry);
 //        }
 
-        Iterator iterator = map.entrySet().iterator();
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
+//        Iterator iterator = map.entrySet().iterator();
+//        while (iterator.hasNext()){
+//            System.out.println(iterator.next());
+//        }
+        int value = (int) map.get("1:");
+        System.out.println(value);
     }
 }

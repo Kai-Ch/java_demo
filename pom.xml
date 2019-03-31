@@ -99,5 +99,11 @@
             <version>1.5.0</version>
         </dependency>
 
+        <!--alibaba JSON-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.54</version>
+        </dependency>
     </dependencies>
 </project>
