@@ -203,6 +203,8 @@ public class FileDemo {
         }finally {
             if(null != writer){
                 try {
+                    // 4.关闭流，关闭前先刷新
+                    writer.flush();
                     writer.close();
                 } catch (IOException e) {
                     e.printStackTrace();
