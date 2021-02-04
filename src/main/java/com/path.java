@@ -1,7 +1,5 @@
 package com;
 
-import com.jd.utils.Log;
-
 /**
  * @Author:kaichenr
  * @Date:2018/8/31 15:30
